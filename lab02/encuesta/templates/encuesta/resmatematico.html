@@ -1,0 +1,24 @@
+
+<h2>{{ titulo }}</h2>
+
+<p>Primer valor: {{ numero1 }}</p>
+<p>Segundo valor: {{ numero2 }}</p>
+
+<p>
+    
+    {% if operacion == "suma" %}
+        <p>Se ha selecionado la operacion Sumar</p>
+        <p> <em>La suma de </em> {{ numero1 }} <em>+</em> {{ numero2}} <em>=</em> {{ suma}} </p>
+    {% endif %}
+
+    {% if operacion == "resta" %}
+        <p>Se ha selecionado la operacion Restar</p>
+        <p> <em>La resta de </em> {{ numero1 }} <em>-</em> {{ numero2}} <em>=</em> {{ resta}}  </p>        
+    {% endif %}
+
+    {% if operacion == "multi" %}
+        <p>Se ha selecionado la operacion Multiplicar</p>
+        <p> <em>La multiplicacion de </em> {{ numero1 }} <em>*</em> {{ numero2}} <em>=</em> {{ multi}}  </p>        
+    {% endif %}
+
+</p>

@@ -1,0 +1,28 @@
+
+
+<form action="{% url 'encuesta:calcular' %}" method="post"> 
+    {% csrf_token %}
+
+    <h1>{{titulo}}</h1>
+    Introduzca el diametro en metros:
+    <input type="number" name="diametro" step="0.001" ><br>
+    Introduzca la altura en metros:
+    <input type="number" name="altura" step="0.001" ><br>
+  
+    // Boton de calcular
+    <input type="submit" name="submit" value="Calcular">
+
+</form>
+
+
+
+<p>
+    {% if volumen %}
+    <p>Respuesta:</p>
+    <p> <em>El volumen del cilindro es de </em> {{ volumen }} <em>metros cubicos</em>  </p>
+    {% endif %}
+</p>
+
+
+
+

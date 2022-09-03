@@ -1,0 +1,30 @@
+
+<h2>{{titulo}}</h2>
+
+
+
+<form action="{% url 'encuesta:enviar2' %}" method="post"> 
+
+    {% csrf_token %}
+
+    
+
+    <h1>Operaciones Matematicas</h1>
+    Ingrese un numero:
+    <input type="number" name="number1" ><br>
+    Ingrese otro numero:
+    <input type="number" name="number2" ><br>
+    Seleccione la Operacion a realizar:
+    <select name="operacion" id="">
+        <option value="suma">Sumar</option>
+        <option value="operacion-obligatoria" selected="selected">Operacion Obligatoria</option>
+        <option value="resta">Restar</option>
+        <option value="multi">Multiplicar</option>
+    </select><br>
+    // Boton de enviar
+    <input type="submit" name="submit" value="Enviar">
+
+
+
+
+</form>
